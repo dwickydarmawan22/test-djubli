@@ -1,0 +1,14 @@
+{
+  "cars": [
+    {
+      "id": 1,
+      "merk": "BMW",
+      "grupModel": "7 series",
+      "model": "AR56",
+      "tahun": 2020,
+      "statusMobil": "Baru",
+      "platNomor": "D 8798 EG",
+      "fotoMobil": "blabla.png"
+    }
+  ]
+}

@@ -59,26 +59,7 @@ export function AddCars() {
 
   return (
     <>
-      <form>
-        <div>
-          <label
-            htmlFor="merk"
-            className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400"
-          >
-            Pilih Merk
-          </label>
-          <select
-            id="merk"
-            onChange={handleMerk}
-            value={merk}
-            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-          >
-            <option>Toyota</option>
-            <option>Honda</option>
-            <option>BMW</option>
-            <option>Lainnya</option>
-          </select>
-        </div>
+      <form className="py-24 px-14 bg-white">
         <div className="mb-6">
           <label
             htmlFor="merk"
@@ -93,7 +74,6 @@ export function AddCars() {
             placeholder="Nissan"
             onChange={handleMerk}
             value={merk}
-            disabled={merk === "Lainnya" ? false : true}
           />
         </div>
         <div className="mb-6">
@@ -145,6 +125,12 @@ export function AddCars() {
         </div>
         <fieldset>
           <legend className="sr-only">Status Mobil</legend>
+          <label
+            className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+            htmlFor="statusMobil"
+          >
+            Status Mobil
+          </label>
           <div className="flex items-center mb-4">
             <input
               id="statusMobil"
@@ -153,7 +139,6 @@ export function AddCars() {
               defaultValue={statusMobil}
               onChange={handleStatusMobil}
               className="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600"
-              defaultChecked
             />
             <label
               htmlFor="statusMobil"
@@ -211,7 +196,7 @@ export function AddCars() {
             onChange={handleFotoMobil}
           />
           <div
-            className="mt-1 text-sm text-gray-500 dark:text-gray-300"
+            className="mt-1 mb-6 text-sm text-gray-500 dark:text-gray-300"
             id="fotoMobil_help"
           >
             Foto mobil digunakan untuk keperluan jual beli
@@ -221,7 +206,7 @@ export function AddCars() {
         <button
           type="submit"
           onClick={handleClick}
-          className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          className="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
         >
           Submit
         </button>

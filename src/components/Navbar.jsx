@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import logo from '../../assets/img/logo.png'
+import logo from '../assets/img/logo-djubli.png'
 import { Transition } from "@headlessui/react"
 
 export const Navbar = () => {
@@ -8,8 +8,8 @@ export const Navbar = () => {
 
   return (
     <div>
-      <nav className="bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav className="bg-white shadow-lg fixed top-0 left-0 right-0">
+        <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center">
               <div className="flex-shrink-0">
@@ -23,13 +23,19 @@ export const Navbar = () => {
                 <div className="ml-10 flex items-baseline space-x-4">
                   <Link
                     to="/"
-                    className="hover:bg-gray-700 text-gray-800 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                    className="hover:bg-green-800 text-green-800 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                   >
                     Beranda
                   </Link>
                   <Link
+                    to="/beli-mobil"
+                    className="text-green-800 hover:bg-green-800 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                  >
+                    Beli Mobil
+                  </Link>
+                  <Link
                     to="/jual-mobil"
-                    className="text-gray-800 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                    className="text-green-800 hover:bg-green-800 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                   >
                     Jual Mobil
                   </Link>
@@ -40,7 +46,7 @@ export const Navbar = () => {
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 type="button"
-                className="bg-gray-900 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+                className="bg-green-900 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
                 aria-controls="mobile-menu"
                 aria-expanded="false"
               >
@@ -97,13 +103,19 @@ export const Navbar = () => {
               <div ref={ref} className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <Link
                   to="/"
-                  className="hover:bg-gray-700 text-gray-800 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                  className="hover:bg-green-800 text-green-800 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                 >
                   Beranda
                 </Link>
                 <Link
+                  to="/beli-mobil"
+                  className="text-green-800 hover:bg-green-800 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                >
+                  Beli Mobil
+                </Link>
+                <Link
                   to="/jual-mobil"
-                  className="text-gray-800 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                  className="text-green-800 hover:bg-green-800 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                 >
                   Jual Mobil
                 </Link>
